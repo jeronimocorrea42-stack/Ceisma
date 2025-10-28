@@ -1,5 +1,11 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/rafael25ic-blip/phoenix-cracked/refs/heads/main/Librerya%20Phoenix%20Crack"))()
 
+local window = library:AddWindow("KILLS || PIRLOxK1NG", {
+    main_color = Color3.fromRGB(0, 0, 255),
+    min_size = Vector2.new(650, 870),
+    can_resize = true,
+})
+
 local Killer = window:AddTab("Kill")
 
 local Players = game:GetService("Players")
