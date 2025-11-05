@@ -4344,5 +4344,5 @@ Gift:AddButton(
 
 local Credits = window:AddTab("Credits")
 
-Credits:AddLabel("Tina Madre 🤍")
+Credits:AddLabel("Rafael,King,Tina,Jasson Bros🫂")
 Credits:AddLabel("Script Creado Por Pirlo")
