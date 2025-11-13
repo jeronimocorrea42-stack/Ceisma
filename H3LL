@@ -5,7 +5,7 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memej
 
 -- VENTANA PRINCIPAL
 local window = library:AddWindow("H3LL PRIVATE [by PIRLOxKING]", {
-    main_color = Color3.fromRGB(255, 255, 0), -- yellow
+    main_color = Color3.fromRGB(173, 216, 230), -- blue 
     min_size = Vector2.new(610, 830),
     can_resize = false,
 })
