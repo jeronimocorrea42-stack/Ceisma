@@ -422,19 +422,23 @@ AutoFarm:AddSwitch("Hide All Frames", function(bool)
 end)
 
 
--- ÃƒÂ°Ã…Â¸Ã…Â½Ã‚Â° BotÃƒÆ’Ã‚Â³n: Girar Ruleta
-AutoFarm:AddButton("Auto Spin", function(state)
-    _G.AutoSpinWheel = state
-    
-    if state then
-        spawn(function()
-            while _G.AutoSpinWheel and task.wait(0.1) do
-                game:GetService("ReplicatedStorage").rEvents.openFortuneWheelRemote:InvokeServer(
-                    "openFortuneWheel",
-                    game:GetService("ReplicatedStorage").fortuneWheelChances["Fortune Wheel"]
-                )
+
+    Misc:AddSwitch("Auto Fortune Wheel", function(Value)
+    _G.autoFortuneWheelActive = Value
+    if Value then
+        local function openFortuneWheel()
+            while _G.autoFortuneWheelActive do
+                local args = {
+                    [1] = "openFortuneWheel",
+                    [2] = game:GetService("ReplicatedStorage"):WaitForChild("fortuneWheelChances"):WaitForChild("Fortune Wheel")
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("openFortuneWheelRemote"):InvokeServer(unpack(args))
+                wait(0)
             end
-        end)
+        end
+        coroutine.wrap(openFortuneWheel)()
+    else
+        _G.autoFortuneWheelActive = false
     end
 end)
 
