@@ -239,7 +239,7 @@ AutoFarm:AddSwitch("Anti AFK", function(state)
 
         madebybloodofbatus.Name = "madebybloodofbatus"
         madebybloodofbatus.Parent = thisoneissocoldww
-        madebybloodofbatus.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        madebybloodofbatus.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
         madebybloodofbatus.Position = UDim2.new(0.085,0,0.13,0)
         madebybloodofbatus.Size = UDim2.new(0,225,0,96)
         UICornerw.Parent = madebybloodofbatus
@@ -265,7 +265,7 @@ AutoFarm:AddSwitch("Anti AFK", function(state)
         uselesslabelone.Size = UDim2.new(0,95,0,24)
         uselesslabelone.Font = Enum.Font.SourceSans
         uselesslabelone.Text = "Anti Afk MCL_PIRLO"
-        uselesslabelone.TextColor3 = Color3.fromRGB(255,255,255)
+        uselesslabelone.TextColor3 = Color3.fromRGB(255, 0, 0)
         uselesslabelone.TextSize = 14
 
         timerlabel.Parent = madebybloodofbatus
