@@ -251,7 +251,7 @@ AutoFarm:AddSwitch("Anti AFK", function(state)
         DestroyButton.Size = UDim2.new(0,27,0,15)
         DestroyButton.Font = Enum.Font.SourceSans
         DestroyButton.Text = "X"
-        DestroyButton.TextColor3 = Color3.fromRGB(255,255,255)
+        DestroyButton.TextColor3 = Color3.fromRGB(255, 120, 120)
         DestroyButton.TextSize = 14
         DestroyButton.MouseButton1Click:Connect(function()
             getgenv().AntiAfkExecuted = false
