@@ -1,35 +1,11 @@
-local whitelistURL = "https://raw.githubusercontent.com/02052011Rafael/02052011Rafael/refs/heads/main/whitelist.txt"
 
-local HttpService = game:GetService("HttpService")
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-
-local function isWhitelisted(username)
-    local success, result = pcall(function()
-        return HttpService:GetAsync(whitelistURL)
-    end)
-
-    if success then
-        for user in string.gmatch(result, "[^\r\n]+") do
-            if string.lower(user) == string.lower(username) then
-                return true
-            end
-        end
-    end
-
-    return false
-end
-
-if not isWhitelisted(LocalPlayer.Name) then
-    LocalPlayer:Kick("Chinga Tu Madre Perrita, Pagame El Script O Chupame Toda Mi Riata")
-end
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/02052011Rafael/02052011Rafael/refs/heads/main/Librerya%20Toxic"))()
 
 local player = game.Players.LocalPlayer
 local displayName = player.DisplayName or player.Name
 
-local window = library:AddWindow("Toxic Paid V3 Rework | Bienvenido " .. displayName, {
+local window = library:AddWindow("MIRAGE PAID | Bienvenido " .. displayName, {
     main_color = Color3.fromRGB(0, 0, 0),
     min_size = Vector2.new(630, 900),
     can_resize = false,
